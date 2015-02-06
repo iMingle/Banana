@@ -1,4 +1,4 @@
-<%@ page contentType="text/html" %>
+<%@ page contentType="text/html" isELIgnored="false" %>
 <%@ taglib prefix="my" tagdir="/WEB-INF/tags/mytags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 

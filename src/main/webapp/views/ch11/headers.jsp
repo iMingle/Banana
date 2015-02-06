@@ -6,7 +6,6 @@
     <title>Headers</title>
   </head>
   <body bgcolor="white">
-    <my:headers caption="Request Headers"
-      border="1" cellspacing="0" cellpadding="5" />
+    <my:headers caption="Request Headers" border="1" cellspacing="0" cellpadding="5" />
   </body>
 </html>

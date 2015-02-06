@@ -1,4 +1,4 @@
-<%@ tag body-content="empty" %>
+<%@ tag body-content="empty" isELIgnored="false" %>
 <%@ attribute name="items" rtexprvalue="true" required="true" %>
 <%@ attribute name="even" fragment="true" required="true" %>
 <%@ attribute name="odd" fragment="true" required="true" %>

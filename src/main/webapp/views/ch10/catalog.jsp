@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html" %>
+<%@ page language="java" contentType="text/html" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -14,8 +14,7 @@
     decide if you like to purchase a copy:
 
     <jsp:useBean id="catalog" scope="application"
-      class="com.ora.jsp.beans.shopping.CatalogBean"
-    />
+      class="org.mingle.banana.jsp.beans.shopping.CatalogBean"/>
 
     <%-- 
       Generate a list of all products with links to the product page.
@@ -30,10 +29,8 @@
       </c:forEach>
     </ul>
 
-    <jsp:useBean 
-      id="cart" scope="session"
-      class="com.ora.jsp.beans.shopping.CartBean"
-    />
+    <jsp:useBean id="cart" scope="session"
+      class="org.mingle.banana.jsp.beans.shopping.CartBean"/>
 
     <%-- Show the contents of the shopping cart, if any --%>
     <c:if test="${!empty cart.productList}">

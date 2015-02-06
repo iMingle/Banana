@@ -1,4 +1,4 @@
-<%@ tag body-content="empty" dynamic-attributes="dynattrs" %>
+<%@ tag body-content="empty" dynamic-attributes="dynattrs" isELIgnored="false" %>
 <%@ attribute name="caption" required="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 

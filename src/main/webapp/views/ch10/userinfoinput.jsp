@@ -1,4 +1,4 @@
-<%@ page contentType="text/html" %>
+<%@ page contentType="text/html" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
@@ -8,8 +8,7 @@
   <body bgcolor="white">
     <jsp:useBean id="userInfo" 
       scope="request"
-      class="com.ora.jsp.beans.userinfo.UserInfoBean"
-    />
+      class="org.mingle.banana.jsp.beans.UserInfoBean"/>
 
     <form action="userinfovalidate.jsp" method="post">
       <input type="hidden" name="submitted" value="true">

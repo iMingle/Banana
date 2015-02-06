@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html" %>
+<%@ page language="java" contentType="text/html" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
@@ -9,7 +9,7 @@
   <body bgcolor="white">
 
     <jsp:useBean id="catalog" scope="application"
-      class="com.ora.jsp.beans.shopping.CatalogBean"
+      class="org.mingle.banana.jsp.beans.shopping.CatalogBean"
     />
 
     <%-- Get the specified ProductBean from the catalog --%>

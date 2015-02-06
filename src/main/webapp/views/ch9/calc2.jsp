@@ -8,7 +8,7 @@
   </head>
   <body bgcolor="white">
 
-    <jsp:useBean id="calc" class="com.ora.jsp.beans.calc.CalcBean">
+    <jsp:useBean id="calc" class="org.mingle.banana.jsp.beans.CalcBean">
       <jsp:setProperty name="calc" property="*" />
     </jsp:useBean>
 
