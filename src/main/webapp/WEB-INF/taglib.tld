@@ -17,7 +17,7 @@
 	Adds a cookie to the response.
     </description>
     <name>addCookie</name>
-    <tag-class>com.ora.jsp.tags.AddCookieTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.AddCookieTag</tag-class>
     <body-content>empty</body-content>
 
     <attribute>
@@ -43,7 +43,7 @@
        calendar for the specified month.
     </description>
     <name>calendar</name>
-    <tag-class>com.ora.jsp.tags.MonthCalendarTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.MonthCalendarTag</tag-class>
     <body-content>empty</body-content>
 
     <attribute>
@@ -136,7 +136,7 @@
       scope attributes.
     </description>
     <name>ifUserInRole</name>
-    <tag-class>com.ora.jsp.tags.IfUserInRoleTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.IfUserInRoleTag</tag-class>
     <body-content>JSP</body-content>
 
     <attribute>
@@ -162,7 +162,7 @@
       var and scope attributes.
     </description>
     <name>ifValidEmailAddr</name>
-    <tag-class>com.ora.jsp.tags.IfValidEmailAddrTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.IfValidEmailAddrTag</tag-class>
     <body-content>JSP</body-content>
 
     <attribute>
@@ -186,7 +186,7 @@
       be removed and the session to be terminated (marked as invalid).
     </description>
     <name>invalidateSession</name>
-    <tag-class>com.ora.jsp.tags.InvalidateSessionTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.InvalidateSessionTag</tag-class>
     <body-content>empty</body-content>
   </tag>
 
@@ -196,7 +196,7 @@
         the current page, otherwise as is.
     </description>
     <name>menuItem</name>
-    <tag-class>com.ora.jsp.tags.MenuItemTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.MenuItemTag</tag-class>
     <body-content>scriptless</body-content>
 
     <attribute>
@@ -211,7 +211,7 @@
       Sets response headers to prevent caching.
     </description>
     <name>noCache</name>
-    <tag-class>com.ora.jsp.tags.NoCacheTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.NoCacheTag</tag-class>
     <body-content>empty</body-content>
   </tag>
 
@@ -220,7 +220,7 @@
       Set the specified response header to the specified value.
     </description>
     <name>setHeader</name>
-    <tag-class>com.ora.jsp.tags.SetHeaderTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.SetHeaderTag</tag-class>
     <body-content>empty</body-content>
 
     <attribute>
@@ -256,7 +256,7 @@
 
   <tag>
     <name>if</name>
-    <tag-class>com.ora.jsp.tags.xmp.IfTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.xmp.IfTag</tag-class>
     <body-content>scriptless</body-content>
 
     <attribute>
@@ -269,7 +269,7 @@
 
   <tag>
     <name>loop</name>
-    <tag-class>com.ora.jsp.tags.xmp.SimpleLoopTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.xmp.SimpleLoopTag</tag-class>
     <body-content>scriptless</body-content>
 
     <attribute>
@@ -291,7 +291,7 @@
        a bean with "text", "value" and "selected" properties.
     </description>
     <name>forEachOption</name>
-    <tag-class>com.ora.jsp.tags.xmp.ForEachOptionTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.xmp.ForEachOptionTag</tag-class>
     <body-content>JSP</body-content>
 
     <attribute>
@@ -317,7 +317,7 @@
       Builds a checkbox element and adds it to the response.
     </description>
     <name>buildCheckbox</name>
-    <tag-class>com.ora.jsp.tags.xmp.BuildCheckboxTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.xmp.BuildCheckboxTag</tag-class>
     <body-content>empty</body-content>
 
     <attribute>

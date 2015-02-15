@@ -23,6 +23,29 @@
         </c:forEach>
       </c:forEach>
     </table>
-
+<div>========================================================</div>
+	<table>
+      <c:forEach items="${newEmpDbInfo.rowsByIndex}" var="row">
+        <c:forEach items="${row}" var="column">
+          <tr>
+            <td align=right>
+              ${fn:escapeXml(row[0])}
+            </td>
+            <td>
+              ${fn:escapeXml(row[1])}
+            </td>
+            <td>
+              ${fn:escapeXml(row[2])}
+            </td>
+            <td>
+              ${fn:escapeXml(row[3])}
+            </td>
+            <td>
+              ${fn:escapeXml(row[4])}
+            </td>
+          </tr>
+        </c:forEach>
+      </c:forEach>
+    </table>
   </body>
 </html>
