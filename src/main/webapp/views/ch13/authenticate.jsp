@@ -36,7 +36,7 @@
 --%>
 <c:set var="dbValues" value="${empInfo.rows[0]}" />
 <jsp:useBean id="validUser" scope="session"
-  class="com.ora.jsp.beans.emp.EmployeeBean" >
+  class="org.mingle.banana.jsp.beans.EmployeeBean" >
   <c:set target="${validUser}" property="userName" 
     value="${dbValues.UserName}" />
   <c:set target="${validUser}" property="firstName" 

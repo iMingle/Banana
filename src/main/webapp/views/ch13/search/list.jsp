@@ -1,4 +1,4 @@
-<%@ page contentType="text/html" %>
+<%@ page contentType="text/html" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -16,13 +16,14 @@
     </c:when>
     <c:otherwise>
       The following employees were found:
-      <p>
       <table border="1">
-        <th>Last Name</th>
-        <th>First Name</th>
-        <th>Department</th>
-        <th>Email Address</th>
-        <th>Modified</th>
+      	<tr>
+	        <th>Last Name</th>
+	        <th>First Name</th>
+	        <th>Department</th>
+	        <th>Email Address</th>
+	        <th>Modified</th>
+        </tr>
         <c:forEach items="${empList.rows}" var="row">
           <tr>
             <td>${fn:escapeXml(row.LastName)}</td>

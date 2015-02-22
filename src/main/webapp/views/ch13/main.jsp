@@ -54,8 +54,7 @@
     <p>
 
     <%-- Get all new items --%>
-    <jsp:useBean id="news" scope="application"
-      class="com.ora.jsp.beans.news.NewsBean" />
+    <jsp:useBean id="news" scope="application" class="org.mingle.banana.jsp.beans.NewsBean" />
     <c:set var="newsItems" value="${news.newsItems}" />
 
     <%--

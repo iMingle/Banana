@@ -155,8 +155,8 @@
 	<security-constraint>
 		<web-resource-collection>
 			<web-resource-name>admin</web-resource-name>
-			<url-pattern>/ch13/admin/*</url-pattern>
-			<url-pattern>/ch13/search/delete.jsp</url-pattern>
+			<url-pattern>/views/ch13/admin/*</url-pattern>
+			<!-- <url-pattern>/views/ch13/search/delete.jsp</url-pattern> -->
 		</web-resource-collection>
 		<auth-constraint>
 			<role-name>admin</role-name>
@@ -166,7 +166,7 @@
 	<security-constraint>
 		<web-resource-collection>
 			<web-resource-name>search</web-resource-name>
-			<url-pattern>/ch13/search/*</url-pattern>
+			<url-pattern>/views/ch13/search/*</url-pattern>
 		</web-resource-collection>
 		<auth-constraint>
 			<role-name>admin</role-name>
@@ -176,7 +176,7 @@
 
 	<login-config>
 		<auth-method>BASIC</auth-method>
-		<realm-name>ORA Examples</realm-name>
+		<realm-name>HTTP Basic authorization</realm-name>
 	</login-config>
 
 	<security-role>

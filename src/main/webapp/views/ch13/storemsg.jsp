@@ -14,7 +14,7 @@
 </c:if>
 
 <%-- Create a new news item bean with the submitted info --%>
-<jsp:useBean id="newsItem" class="com.ora.jsp.beans.news.NewsItemBean" >
+<jsp:useBean id="newsItem" class="org.mingle.banana.jsp.beans.NewsItemBean" >
   <jsp:setProperty name="newsItem" property="*" />
   <c:set target="${newsItem}" property="postedBy" 
     value="${validUser.firstName} ${validUser.lastName}" />
