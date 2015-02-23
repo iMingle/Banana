@@ -1,4 +1,4 @@
-<%@ page contentType="text/html" %>
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
@@ -7,6 +7,9 @@
   <fmt:bundle> action pick the best one based on the Accept-Language
   header.
 --%>
+<c:if test="${param.language == 'zh'}">
+  <fmt:setLocale value="zh" scope="session" />
+</c:if>
 <c:if test="${param.language == 'en'}">
   <fmt:setLocale value="en" scope="session" />
 </c:if>
@@ -34,6 +37,9 @@
     <fmt:message key="select_language" />
     <form action="input.jsp">
       <c:set var="currLang" value="${inputBundle.locale.language}" />
+      <input type="radio" name="language" value="zh"
+        ${currLang == 'zh' ? 'checked' : ''}>
+      <fmt:message key="chinese" /><br>
       <input type="radio" name="language" value="en"
         ${currLang == 'en' ? 'checked' : ''}>
         <fmt:message key="english" /><br>

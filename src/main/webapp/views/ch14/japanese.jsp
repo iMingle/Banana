@@ -4,6 +4,6 @@
     <title>Hello Japanese World</title>
   </head>
   <body bgcolor="white">
-    Hello World in Japanese: ¡“ú‚Í¢ŠE
+    Hello World in Japanese: ä»Šæ—¥ã¯ä¸–ç•Œ
   </body>
 </html>

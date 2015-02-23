@@ -10,7 +10,7 @@
   </head>
   <body bgcolor="white">
     <jsp:useBean id="pollResult" scope="application"
-       class="com.ora.jsp.beans.poll.PollBean" />
+       class="org.mingle.banana.jsp.beans.PollBean" />
 
     <jsp:useBean id="now" class="java.util.Date" />
 
