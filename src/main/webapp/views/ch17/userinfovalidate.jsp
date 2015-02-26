@@ -2,7 +2,7 @@
 
 <jsp:useBean id="userInfo" 
   scope="request"
-  class="com.ora.jsp.beans.userinfo.UserInfoBean">
+  class="org.mingle.banana.jsp.beans.UserInfoBean">
   <jsp:setProperty name="userInfo" property="*" />
 </jsp:useBean>
 
