@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.0//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_0.dtd">
+
+<struts-config>
+  <global-forwards>
+    <forward name="login" path="/views/ch19/login.jsp" redirect="true" />
+    <forward name="main" path="/views/ch19/protected/main.jsp" redirect="true" />
+  </global-forwards>
+
+  <action-mappings>
+    <action path="/views/ch19/authenticate"
+      type="org.mingle.banana.jsp.servlets.AuthenticateAction" />
+    <action path="/views/ch19/logout"
+      type="org.mingle.banana.jsp.servlets.LogoutAction" />
+    <action path="/views/ch19/protected/storeMsg"
+      type="org.mingle.banana.jsp.servlets.StoreMsgAction" />
+    <action path="/views/ch19/protected/updateProfile"
+      type="org.mingle.banana.jsp.servlets.UpdateProfileAction" />
+  </action-mappings>
+</struts-config>

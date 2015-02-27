@@ -44,39 +44,38 @@
 	</context-param>
 
 	<!-- Filter and listener configurations for Chapter 19 -->
-<!--
 	<filter>
 		<filter-name>accessControl</filter-name>
 		<filter-class>
-			com.ora.jsp.servlets.AccessControlFilter
+			org.mingle.banana.jsp.servlets.AccessControlFilter
 		</filter-class>
 		<init-param>
 			<param-name>loginPage</param-name>
-			<param-value>/ch19/login.jsp</param-value>
+			<param-value>/views/ch19/login.jsp</param-value>
 		</init-param>
 	</filter>
 
 	<filter-mapping>
 		<filter-name>accessControl</filter-name>
-		<url-pattern>/ch19/protected/*</url-pattern>
+		<url-pattern>/views/ch19/protected/*</url-pattern>
 	</filter-mapping>
  
 	<listener>
 		<listener-class>
-			com.ora.jsp.servlets.ResourceManagerListener
+			org.mingle.banana.jsp.servlets.ResourceManagerListener
 		</listener-class>
 	</listener>
 
 	<listener>
 		<listener-class>
-			com.ora.jsp.servlets.SessionCounterListener
+			org.mingle.banana.jsp.servlets.SessionCounterListener
 		</listener-class>
 	</listener>
- -->
+
 	<!-- Servlet for showing JSP source. NOTE! Remove this in production -->
 	<servlet>
 		<servlet-name>jspSource</servlet-name>
-		<servlet-class>JSPSourceServlet</servlet-class>
+		<servlet-class>org.mingle.banana.jsp.servlets.JSPSourceServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -87,7 +86,11 @@
 	<!-- Example servlets, see Chapter 19 -->
 	<servlet>
 		<servlet-name>helloWorld</servlet-name>
-		<servlet-class>HelloWorld</servlet-class>
+		<servlet-class>org.mingle.banana.jsp.servlets.HelloWorld</servlet-class>
+		<init-param>
+			<param-name>greeting</param-name>
+			<param-value>World Hello</param-value>
+		</init-param>
 	</servlet>
 
 	<servlet-mapping>
@@ -97,7 +100,7 @@
 
 	<servlet>
 		<servlet-name>helloYou</servlet-name>
-		<servlet-class>HelloYou</servlet-class>
+		<servlet-class>org.mingle.banana.jsp.servlets.HelloYou</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -107,7 +110,7 @@
 
 	<servlet>
 		<servlet-name>helloMIME</servlet-name>
-		<servlet-class>HelloMIME</servlet-class>
+		<servlet-class>org.mingle.banana.jsp.servlets.HelloMIME</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -115,9 +118,7 @@
 		<url-pattern>/helloMIME/*</url-pattern>
 	</servlet-mapping>
 
-
 	<!-- Struts Controller servlet, see Chapter 19 -->
-<!-- 
 	<servlet>
 		<servlet-name>action</servlet-name>
 		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
@@ -128,7 +129,7 @@
 		<servlet-name>action</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
- -->
+
 	<!-- The Welcome File List -->
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
@@ -136,8 +137,11 @@
 	</welcome-file-list>
 
 	<!-- Uncomment if you want all exceptions to be handled by the customized 
-		error page. <error-page> <exception-type>java.lang.Throwable</exception-type> 
-		<location>/ch9/errorpage.jsp</location> </error-page> -->
+		error page. -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/views/ch9/errorpage.jsp</location>
+	</error-page>
 
 	<!-- This resource reference is only used to test the JNDI config described 
 		in Chapter 23. None of the examples use it. -->
