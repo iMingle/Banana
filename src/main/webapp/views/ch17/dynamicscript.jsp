@@ -1,11 +1,11 @@
-<%@ page contentType="application/x-javascript"%>
+<%@ page contentType="application/x-javascript" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <sql:setDataSource var="pizza" 
-  driver="org.gjt.mm.mysql.Driver"
-  url="jdbc:mysql:///test"
+  driver="com.mysql.jdbc.Driver"
+  url="jdbc:mysql:///mingle" user="root" password="password"
 />
 
 <sql:query var="sizes" dataSource="${pizza}">
@@ -34,10 +34,10 @@ values = new Array(
 function setList(selectCtrl, itemArray) {
   // Remove current items
   for (i = selectCtrl.options.length; i >= 0; i--) {
-    selectCtrl.options[i] = null; 
+    selectCtrl.options[i] = null;
   }
   for (i = 0; i < itemArray.length; i++) {
     selectCtrl.options[i] = new Option(itemArray[i][0]);
-    selectCtrl.options[i].value = itemArray[i][1]; 
+    selectCtrl.options[i].value = itemArray[i][1];
   }
 }

@@ -4,7 +4,7 @@
 <html>
   <head>
     <title>Online Pizza</title>
-    <script language="JavaScript" src="dynamicscript.jsp"></script> 
+    <script type="text/javascript" src="dynamicscript.jsp"></script> 
   </head>
   <body bgcolor="white" 
     onLoad="setList(document.pizza.sels, values[0]);">

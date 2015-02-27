@@ -71,10 +71,7 @@
     </script>
   </head>
   <body bgcolor="white">
-    <jsp:useBean id="userInfo" 
-      scope="request"
-      class="org.mingle.banana.jsp.beans.UserInfoBean"
-    />
+    <jsp:useBean id="userInfo" scope="request" class="org.mingle.banana.jsp.beans.UserInfoBean"/>
 
     <form action="userinfovalidate.jsp" method="post"
       onSubmit="return isValidForm(this)">

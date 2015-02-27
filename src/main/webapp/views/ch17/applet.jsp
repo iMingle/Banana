@@ -7,7 +7,7 @@
     <h1>Embedding an applet</h1>
     <jsp:plugin type="applet" code="Clock2.class" 
       codebase="applet" 
-      jreversion="1.2" width="160" height="150" >
+      jreversion="1.2" width="180" height="150" >
       <jsp:params>
         <jsp:param name="bgcolor" value="ccddff" />
       </jsp:params>
