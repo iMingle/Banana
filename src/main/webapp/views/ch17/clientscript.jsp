@@ -5,8 +5,8 @@
 <html>
   <head>
     <title>User Info Entry Form</title>
-    <script language="JavaScript">
-      <!-- Hide from browsers without JavaScript support
+    <script type="text/javascript">
+      <!-- Hide from browsers without JavaScript support -->
 
       function isValidForm(theForm) {
         if (isEmpty(theForm.userName.value)) {
@@ -67,13 +67,13 @@
         }
         return true;
       }
-      -->
+      
     </script>
   </head>
   <body bgcolor="white">
     <jsp:useBean id="userInfo" 
       scope="request"
-      class="com.ora.jsp.beans.userinfo.UserInfoBean"
+      class="org.mingle.banana.jsp.beans.UserInfoBean"
     />
 
     <form action="userinfovalidate.jsp" method="post"
@@ -168,7 +168,7 @@
             <input type="checkbox" name="food" value="z"
               ${userInfo.pizzaSelected ? 'checked' : ''}>Pizza<br>
             <input type="checkbox" name="food" value="p"
-              ${userInfo.pastaSelected} ? 'checked' : ''}>Pasta<br>
+              ${userInfo.pastaSelected ? 'checked' : ''}>Pasta<br>
             <input type="checkbox" name="food" value="c"
               ${userInfo.chineseSelected ? 'checked' : ''}>Chinese
           </td>
