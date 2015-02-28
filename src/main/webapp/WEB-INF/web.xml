@@ -44,7 +44,6 @@
 	</context-param>
 
 	<!-- Filter and listener configurations for Chapter 19 -->
-
 	<filter>
 		<filter-name>accessControl</filter-name>
 		<filter-class>
