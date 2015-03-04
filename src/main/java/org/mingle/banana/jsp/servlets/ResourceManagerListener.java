@@ -28,12 +28,16 @@ public class ResourceManagerListener implements ServletContextListener {
 		 */
 		String driverClass = application.getInitParameter("driverClass");
 		String jdbcURL = application.getInitParameter("jdbcURL");
+		String user = application.getInitParameter("user");
+		String password = application.getInitParameter("password");
 
 		DataSourceWrapper ds = null;
 		try {
 			ds = new DataSourceWrapper();
 			ds.setDriverClassName(driverClass);
 			ds.setUrl(jdbcURL);
+			ds.setUser(user);
+			ds.setPassword(password);
 		} catch (Exception e) {
 			application.log("Error creating connection pool: ", e);
 		}
