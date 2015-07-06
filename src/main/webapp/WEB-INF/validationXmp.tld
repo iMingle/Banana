@@ -15,18 +15,18 @@
   <uri>xmplib</uri>
 
   <validator>
-    <validator-class>com.ora.jsp.tlv.OraTLV</validator-class>
+    <validator-class>org.mingle.banana.jsp.tlv.OraTLV</validator-class>
   </validator>
 
   <tag>
     <name>child</name>
-    <tag-class>com.ora.jsp.tags.xmp.ChildTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.xmp.ChildTag</tag-class>
     <body-content>empty</body-content>
   </tag>
 
   <tag>
     <name>parent</name>
-    <tag-class>com.ora.jsp.tags.xmp.ParentTag</tag-class>
+    <tag-class>org.mingle.banana.jsp.tags.xmp.ParentTag</tag-class>
     <body-content>scriptless</body-content>
   </tag>
 </taglib>

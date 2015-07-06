@@ -1,3 +1,4 @@
+<%@page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="ora" uri="orataglib" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -21,7 +22,7 @@
           </tr>
         </jsp:attribute>
         <jsp:attribute name="dayNamePattern">
-          <th><fmt:formatDate value="${c}" pattern="EE" /></th>
+          <th><fmt:formatDate value="${c}" pattern="E" /></th>
         </jsp:attribute>
         <jsp:attribute name="padPattern">
           <td bgcolor="lightgrey" width="30" height="30" valign="top">
