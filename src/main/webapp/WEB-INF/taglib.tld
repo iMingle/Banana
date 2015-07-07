@@ -338,7 +338,7 @@
       Converts Fahrenheit to Celsius
     </description>
     <name>toCelsius</name>
-    <function-class>com.ora.jsp.util.TempConverter</function-class>
+    <function-class>org.mingle.banana.jsp.util.TempConverter</function-class>
     <function-signature>double toCelsius(double)</function-signature>
   </function>
 
@@ -347,7 +347,7 @@
       Converts Celsius to Fahrenheit
     </description>
     <name>toFahrenheit</name>
-    <function-class>com.ora.jsp.util.TempConverter</function-class>
+    <function-class>org.mingle.banana.jsp.util.TempConverter</function-class>
     <function-signature>double toFahrenheit(double)</function-signature>
   </function>
 
