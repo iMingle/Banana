@@ -61,13 +61,13 @@
 		</filter-class>
 		<init-param>
 			<param-name>loginPage</param-name>
-			<param-value>/views/ch19/login.jsp</param-value>
+			<param-value>/views/jsp/ch19/login.jsp</param-value>
 		</init-param>
 	</filter>
 
 	<filter-mapping>
 		<filter-name>accessControl</filter-name>
-		<url-pattern>/views/ch19/protected/*</url-pattern>
+		<url-pattern>/views/jsp/ch19/protected/*</url-pattern>
 	</filter-mapping>
  
 	<listener>
@@ -150,7 +150,7 @@
 		error page. -->
 	<error-page>
 		<exception-type>java.lang.Throwable</exception-type>
-		<location>/views/ch9/errorpage.jsp</location>
+		<location>/views/jsp/ch9/errorpage.jsp</location>
 	</error-page>
 
 	<!-- This resource reference is only used to test the JNDI config described 
@@ -169,8 +169,8 @@
 	<security-constraint>
 		<web-resource-collection>
 			<web-resource-name>admin</web-resource-name>
-			<url-pattern>/views/ch13/admin/*</url-pattern>
-			<!-- <url-pattern>/views/ch13/search/delete.jsp</url-pattern> -->
+			<url-pattern>/views/jsp/ch13/admin/*</url-pattern>
+			<!-- <url-pattern>/views/jsp/ch13/search/delete.jsp</url-pattern> -->
 		</web-resource-collection>
 		<auth-constraint>
 			<role-name>admin</role-name>
@@ -180,7 +180,7 @@
 	<security-constraint>
 		<web-resource-collection>
 			<web-resource-name>search</web-resource-name>
-			<url-pattern>/views/ch13/search/*</url-pattern>
+			<url-pattern>/views/jsp/ch13/search/*</url-pattern>
 		</web-resource-collection>
 		<auth-constraint>
 			<role-name>admin</role-name>

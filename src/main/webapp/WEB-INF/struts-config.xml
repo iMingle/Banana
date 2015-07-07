@@ -6,18 +6,18 @@
 
 <struts-config>
   <global-forwards>
-    <forward name="login" path="/views/ch19/login.jsp" redirect="true" />
-    <forward name="main" path="/views/ch19/protected/main.jsp" redirect="true" />
+    <forward name="login" path="/views/jsp/ch19/login.jsp" redirect="true" />
+    <forward name="main" path="/views/jsp/ch19/protected/main.jsp" redirect="true" />
   </global-forwards>
 
   <action-mappings>
-    <action path="/views/ch19/authenticate"
+    <action path="/views/jsp/ch19/authenticate"
       type="org.mingle.banana.jsp.servlets.AuthenticateAction" />
-    <action path="/views/ch19/logout"
+    <action path="/views/jsp/ch19/logout"
       type="org.mingle.banana.jsp.servlets.LogoutAction" />
-    <action path="/views/ch19/protected/storeMsg"
+    <action path="/views/jsp/ch19/protected/storeMsg"
       type="org.mingle.banana.jsp.servlets.StoreMsgAction" />
-    <action path="/views/ch19/protected/updateProfile"
+    <action path="/views/jsp/ch19/protected/updateProfile"
       type="org.mingle.banana.jsp.servlets.UpdateProfileAction" />
   </action-mappings>
 </struts-config>

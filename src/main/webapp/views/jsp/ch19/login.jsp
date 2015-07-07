@@ -18,7 +18,7 @@
       Create a server-relative path for the form so that it's
       valid even when a protected resource forwards to this page.
     --%>
-    <form action="<c:url value="/views/ch19/authenticate.do" />" method="post">
+    <form action="<c:url value="/views/jsp/ch19/authenticate.do" />" method="post">
 
       <input type="hidden" name="origURL" 
         value="${fn:escapeXml(param.origURL)}">
