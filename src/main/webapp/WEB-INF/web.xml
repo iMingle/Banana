@@ -162,7 +162,7 @@
 		<res-ref-name>jdbc/Example</res-ref-name>
 		<res-type>javax.sql.DataSource</res-type>
 		<res-auth>Container</res-auth>
-		<res-sharing-scope>Sharable</res-sharing-scope>
+		<!-- <res-sharing-scope>Sharable</res-sharing-scope> -->
 	</resource-ref>
 
 	<!-- Security constraints for examples in Chapter 13 -->
