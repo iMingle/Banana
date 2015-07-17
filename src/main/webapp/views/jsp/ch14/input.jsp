@@ -20,8 +20,8 @@
   <fmt:setLocale value="de" scope="session" />
 </c:if>
 
-<fmt:setBundle basename="input" var="inputBundle" />
-<fmt:setBundle basename="input" scope="session" />
+<fmt:setBundle basename="jsp/input" var="inputBundle" />
+<fmt:setBundle basename="jsp/input" scope="session" />
 
 <html>
   <head>

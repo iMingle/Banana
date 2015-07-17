@@ -20,8 +20,8 @@
   <fmt:setLocale value="de" scope="session" />
 </c:if>
 
-<fmt:setBundle basename="pages" var="pagesBundle" />
-<fmt:setBundle basename="labels" scope="session" />
+<fmt:setBundle basename="jsp/pages" var="pagesBundle" />
+<fmt:setBundle basename="jsp/labels" scope="session" />
 
 <html>
   <head>
