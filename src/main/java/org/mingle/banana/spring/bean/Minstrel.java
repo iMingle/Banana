@@ -1,4 +1,4 @@
-package org.mingle.banana.spring.knights;
+package org.mingle.banana.spring.bean;
 
 public class Minstrel {
 	public void singBeforeQuest() { // <co id="co_singBefore"/>

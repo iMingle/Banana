@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- 通过构造方法注入 -->
+	<bean id="knight" class="org.mingle.banana.spring.bean.BraveKnight">
+		<constructor-arg ref="quest" />
+	</bean>
+
+	<bean id="quest" class="org.mingle.banana.spring.bean.SlayDragonQuest" />
+  
+	<bean id="minstrel" class="org.mingle.banana.spring.bean.Minstrel" />
+
+	<!-- 切面 -->
+	<aop:config>
+		<aop:aspect ref="minstrel">
+	
+		<aop:pointcut id="embark" 
+          expression="execution(* *.embarkOnQuest(..))" /> <!--<co id="co_define_pointcut"/>-->
+
+		<aop:before pointcut-ref="embark"
+                  method="singBeforeQuest"/>    <!--<co id="co_minstrel_before_advice"/>-->
+
+		<aop:after pointcut-ref="embark"
+                 method="singAfterQuest"/>     <!--<co id="co_minstrel_after_advice"/>-->
+
+		</aop:aspect>
+	</aop:config>
+	
+	<!-- 通过构造方法注入 -->
+	<bean id="dukeSingleton" class="org.mingle.banana.spring.bean.Juggler" scope="singleton">
+		<constructor-arg value="15" />
+	</bean>
+	<bean id="dukePrototype" class="org.mingle.banana.spring.bean.Juggler" scope="prototype">
+		<constructor-arg value="15" />
+	</bean>
+	<!-- 通过set方法注入 -->
+	<bean id="dukeProperty" class="org.mingle.banana.spring.bean.Juggler">
+		<property name="beanBags" value="#{18}"/>
+		<property name="list">
+			<list>
+				<value>#{"list1".toUpperCase()}</value>
+				<value>#{T(java.lang.Math).PI / 3 + ' KO'}</value>
+			</list>
+		</property>
+		<property name="array">
+			<array>
+				<value>1</value>
+				<value>2</value>
+			</array>
+		</property>
+		<property name="set">
+			<set>
+				<value>set1</value>
+				<value>set2</value>
+			</set>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="map1" value="1"/>
+				<entry key="map2" value="2"/>
+			</map>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="url">url</prop>
+				<prop key="username">username</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="dukePropertyP" class="org.mingle.banana.spring.bean.Juggler" p:beanBags = "14"/>
+	<!-- 通过工厂方法注入 -->
+	<bean id="dukeFactoryMethod" class="org.mingle.banana.spring.bean.Juggler" factory-method="getInstance"/>
+</beans>
