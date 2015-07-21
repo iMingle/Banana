@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:aop="http://www.springframework.org/schema/aop"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:component-scan base-package="org.mingle.banana.spring.aop" />
+
+	<bean id="audience" class="org.mingle.banana.spring.aop.Audience" />
+	<bean id="magician" class="org.mingle.banana.spring.aop.Magician" />
+
+	<aop:config>
+		<aop:aspect ref="audience">
+			<aop:pointcut expression="execution(* org.mingle.banana.spring.aop.Performer.perform(..))" id="performance"/>
+	
+		    <aop:before pointcut-ref="performance" method="takeSeats" />
+		    <aop:before pointcut-ref="performance" method="turnOffCellPhones" />
+		    <aop:after-returning pointcut-ref="performance" method="applaud" />
+		    <aop:after-throwing pointcut-ref="performance" method="demandRefund" />
+		    
+		    <aop:around pointcut-ref="performance" method="watchPerformance"/>
+		</aop:aspect>
+		<aop:aspect ref="magician">
+			<aop:pointcut expression="execution(* org.mingle.banana.spring.aop.MindReader.interceptThoughts(String)) and args(content)" id="thought"/>
+		    
+		    <aop:before pointcut-ref="thought" method="interceptThoughts" arg-names="content" />
+		</aop:aspect>
+	</aop:config>
+	
+	<!-- AOP注解生效 -->
+	<aop:aspectj-autoproxy/>
+</beans>
