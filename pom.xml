@@ -11,6 +11,7 @@
   <properties>
       <spring.group>org.springframework</spring.group>
       <spring.version>4.1.7.RELEASE</spring.version>
+      <hibernate.group>org.hibernate</hibernate.group>
   </properties>
   
   <dependencies>
@@ -83,16 +84,65 @@
 		<artifactId>spring-aop</artifactId>
 		<version>${spring.version}</version>
 	</dependency>
+	<!-- Spring Aspects -->
+	<dependency>
+		<groupId>${spring.group}</groupId>
+		<artifactId>spring-aspects</artifactId>
+		<version>${spring.version}</version>
+    </dependency>
+	<!-- Spring JDBC -->
+	<dependency>
+		<groupId>${spring.group}</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<!-- Spring Object/Relational Mapping -->
+	<dependency>
+		<groupId>${spring.group}</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
 	<!-- Spring test -->
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-test</artifactId>
 		<version>${spring.version}</version>
     </dependency>
+    <!-- The core O/RM functionality as provided by Hibernate -->
+    <dependency>
+		<groupId>${hibernate.group}</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>5.0.0.CR2</version>
+	</dependency>
+	<!-- Hibernate O/RM implementation of the JPA specification -->
+    <dependency>
+		<groupId>${hibernate.group}</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>5.0.0.CR2</version>
+	</dependency>
+	<!-- Hibernate's Bean Validation (JSR-303) reference implementation -->
+    <dependency>
+		<groupId>${hibernate.group}</groupId>
+		<artifactId>hibernate-validator</artifactId>
+		<version>5.2.0.CR1</version>
+	</dependency>
+	<!-- Annotations metadata for Hibernate -->
+    <dependency>
+		<groupId>${hibernate.group}</groupId>
+		<artifactId>hibernate-annotations</artifactId>
+		<version>3.5.6-Final</version>
+	</dependency>
+    
 	<!-- The AspectJ weaver introduces advices to java classes -->
 	<dependency>
 		<groupId>org.aspectj</groupId>
 		<artifactId>aspectjweaver</artifactId>
+		<version>1.8.6</version>
+	</dependency>
+	<!-- The runtime needed to execute a program using AspectJ -->
+	<dependency>
+		<groupId>org.aspectj</groupId>
+		<artifactId>aspectjrt</artifactId>
 		<version>1.8.6</version>
 	</dependency>
 	<!-- Code generation library with shaded ASM dependecies -->
@@ -106,6 +156,30 @@
 		<groupId>javax.inject</groupId>
 		<artifactId>javax.inject</artifactId>
 		<version>1</version>
+	</dependency>
+	<!-- Apache Commons DBCP software implements Database Connection Pooling -->
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-dbcp2</artifactId>
+		<version>2.1</version>
+	</dependency>
+	<!-- Core Jackson abstractions, basic JSON streaming API implementation -->
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-core</artifactId>
+		<version>2.6.0</version>
+	</dependency>
+	<!-- Core annotations used for value types, used by Jackson data binding package -->
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-annotations</artifactId>
+		<version>2.6.0</version>
+	</dependency>
+	<!-- General data-binding functionality for Jackson: works on core streaming API -->
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
+		<version>2.6.0</version>
 	</dependency>
   </dependencies>
   

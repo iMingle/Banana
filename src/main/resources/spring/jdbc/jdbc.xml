@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/jdbc
+ 		http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<context:component-scan base-package="org.mingle.banana.spring.jdbc" />
+	
+	<!-- 数据源 -->
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close"  lazy-init="false">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost/mingle" />
+        <property name="username" value="root" />
+        <property name="password" value="password" />
+    </bean>
+    
+    <!-- 构建Hibernate Session工厂 -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<!-- 映射文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>spring/jdbc/SpitterHibernate.hbm.xml</value>
+			</list>
+		</property>
+		<!-- 扫描文件夹或文件,包含JPA的@Entity或@MappedSuperclass或Hibernate的@Entity -->
+		<property name="packagesToScan" value="org.mingle.banana.spring.jdbc" />
+		<property name="annotatedClasses">
+			<list>
+				<value>org.mingle.banana.spring.jdbc.SpitterHibernate</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="dialect">org.hibernate.dialect.MySQLInnoDBDialect</prop>
+			</props>
+		</property>
+	</bean>
+ 
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 将异常转换为Spring的异常 -->
+	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+	
+	<bean id="persistenceUnitManager"	class="org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager">
+		<property name="persistenceXmlLocation" value="classpath:/META-INF/persistence.xml"/>
+		<property name="defaultDataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="entityManagerFactory"	class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceUnitManager" ref="persistenceUnitManager" />
+		<property name="persistenceUnitName" value="spitterPU" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+	</bean>
+</beans>
