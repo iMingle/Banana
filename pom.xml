@@ -108,6 +108,12 @@
 		<artifactId>spring-test</artifactId>
 		<version>${spring.version}</version>
     </dependency>
+	<!-- Spring Web MVC -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${spring.version}</version>
+    </dependency>
     <!-- The core O/RM functionality as provided by Hibernate -->
     <dependency>
 		<groupId>${hibernate.group}</groupId>
@@ -180,6 +186,12 @@
 		<groupId>com.fasterxml.jackson.core</groupId>
 		<artifactId>jackson-databind</artifactId>
 		<version>2.6.0</version>
+	</dependency>
+	<!-- The Apache Log4j Implementation -->
+	<dependency>
+		<groupId>org.apache.logging.log4j</groupId>
+		<artifactId>log4j-core</artifactId>
+		<version>2.3</version>
 	</dependency>
   </dependencies>
   
