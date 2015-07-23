@@ -7,9 +7,10 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.mingle.banana.spring.jdbc.Spittle;
 import org.springframework.web.servlet.view.feed.AbstractRssFeedView;
 
-import com.sun.syndication.feed.rss.Item;
+import com.rometools.rome.feed.rss.Item;
 
 public class SpittlesRssView extends AbstractRssFeedView {
 

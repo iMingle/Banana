@@ -25,7 +25,6 @@ public class HomeController {
 		return "home";
 	}
 
-	// <start id="spittlesPerPage"/>
 	public static final int DEFAULT_SPITTLES_PER_PAGE = 25;
 
 	private int spittlesPerPage = DEFAULT_SPITTLES_PER_PAGE;
@@ -37,5 +36,4 @@ public class HomeController {
 	public int getSpittlesPerPage() {
 		return spittlesPerPage;
 	}
-	// <end id="spittlesPerPage"/>
 }

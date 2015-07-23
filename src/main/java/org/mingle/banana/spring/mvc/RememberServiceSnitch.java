@@ -1,10 +1,11 @@
 package org.mingle.banana.spring.mvc;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices;
 
 public class RememberServiceSnitch {
-	private static final Logger LOGGER = Logger
+	private static final Logger LOGGER = LoggerFactory
 			.getLogger(RememberServiceSnitch.class);
 
 	public void tellMe() {

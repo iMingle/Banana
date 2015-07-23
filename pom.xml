@@ -114,6 +114,49 @@
 		<artifactId>spring-webmvc</artifactId>
 		<version>${spring.version}</version>
     </dependency>
+	<!-- spring-security-core -->
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-core</artifactId>
+		<version>4.0.1.RELEASE</version>
+	</dependency>
+	<!-- spring-security-web -->
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-web</artifactId>
+		<version>4.0.1.RELEASE</version>
+	</dependency>
+	<!-- spring-security-config -->
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-config</artifactId>
+		<version>4.0.1.RELEASE</version>
+	</dependency>
+	<!-- spring-security-taglibs -->
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-taglibs</artifactId>
+		<version>4.0.1.RELEASE</version>
+	</dependency>
+	<!-- spring-security-ldap -->
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-ldap</artifactId>
+		<version>4.0.1.RELEASE</version>
+	</dependency>
+	<!-- Spring Web Flow -->
+	<dependency>
+		<groupId>org.springframework.webflow</groupId>
+		<artifactId>spring-webflow</artifactId>
+		<version>2.4.1.RELEASE</version>
+	</dependency>
+	<!-- Spring Binding -->
+	<dependency>
+		<groupId>org.springframework.webflow</groupId>
+		<artifactId>spring-binding</artifactId>
+		<version>2.4.1.RELEASE</version>
+	</dependency>
+	
     <!-- The core O/RM functionality as provided by Hibernate -->
     <dependency>
 		<groupId>${hibernate.group}</groupId>
@@ -192,6 +235,98 @@
 		<groupId>org.apache.logging.log4j</groupId>
 		<artifactId>log4j-core</artifactId>
 		<version>2.3</version>
+	</dependency>
+	<!-- The slf4j API -->
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.7.12</version>
+	</dependency>
+	<!-- SLF4J NOP(no operation) Binding -->
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-nop</artifactId>
+		<version>1.7.12</version>
+	</dependency>
+	<!-- All Roads Lead to ROME. ROME is a set of Atom/RSS Java utilities that make 
+	it easy to work in Java with most syndication formats. 
+	Today it accepts all flavors of RSS (0.90, 0.91, 0.92, 0.93, 0.94, 1.0 and 2.0), 
+	Atom 0.3 and Atom 1.0 feeds. Rome includes a set of parsers and generators for 
+	the various flavors of feeds, as well as converters to convert from one format 
+	to another. The parsers can give you back Java objects that are either specific 
+	for the format you want to work with, or a generic normalized SyndFeed object that 
+	lets you work on with the data without bothering about the underlying format. -->
+	<dependency>
+		<groupId>com.rometools</groupId>
+		<artifactId>rome</artifactId>
+		<version>1.5.1</version>
+	</dependency>
+	<!-- Toolkit for Amazon S3, Amazon CloudFront, and Google Storage Service -->
+	<dependency>
+		<groupId>net.java.dev.jets3t</groupId>
+		<artifactId>jets3t</artifactId>
+		<version>0.9.3</version>
+	</dependency>
+	<!-- Java Servlet API -->
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>3.1.0</version>
+	</dependency>
+	<!-- The Apache Commons FileUpload component provides a simple yet flexible 
+	means of adding support for multipart file upload functionality to servlets and web applications -->
+	<dependency>
+		<groupId>commons-fileupload</groupId>
+		<artifactId>commons-fileupload</artifactId>
+		<version>1.3.1</version>
+	</dependency>
+	<!-- Tiles Core Library, including basic implementation of the APIs -->
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-core</artifactId>
+		<version>3.0.5</version>
+	</dependency>
+	<!-- Tiles JSP support: Classes and tag libraries to use Tiles in a JSP environment -->
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-jsp</artifactId>
+		<version>3.0.5</version>
+	</dependency>
+	<!-- Server's core contains the JNDI provider, interceptors, schema, and database subsystems. 
+	The core is the heart of the server without protocols enabled -->
+	<dependency>
+		<groupId>org.apache.directory.server</groupId>
+		<artifactId>apacheds-core</artifactId>
+		<version>2.0.0-M20</version>
+	</dependency>
+	<!-- The JNDI provider which launches the core and associated network services: 
+	Changepw, Kerberos, LDAP, and NTP if all are configured. By default only LDAP is configured to startup -->
+	<dependency>
+		<groupId>org.apache.directory.server</groupId>
+		<artifactId>apacheds-server-jndi</artifactId>
+		<version>2.0.0-M20</version>
+	</dependency>
+	<!-- Date and time library to replace JDK date handling -->
+	<dependency>
+		<groupId>joda-time</groupId>
+		<artifactId>joda-time</artifactId>
+		<version>2.8.1</version>
+	</dependency>
+	<!-- A Java Web Filter for any J2EE compliant web application server 
+	(such as Resin, Orion or Tomcat), which allows you to rewrite URLs before 
+	they get to your code. It is a very powerful tool just like Apache's mod_rewrite -->
+	<dependency>
+		<groupId>org.tuckey</groupId>
+		<artifactId>urlrewritefilter</artifactId>
+		<version>4.0.4</version>
+	</dependency>
+	<!-- Apache Commons Lang, a package of Java utility classes for the classes 
+	that are in java.lang's hierarchy, or are considered to be so standard as to 
+	justify existence in java.lang -->
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang3</artifactId>
+		<version>3.4</version>
 	</dependency>
   </dependencies>
   

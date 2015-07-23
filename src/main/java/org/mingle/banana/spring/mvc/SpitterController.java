@@ -1,13 +1,18 @@
 package org.mingle.banana.spring.mvc;
 
 import java.io.ByteArrayInputStream;
-import java.security.Permission;
 import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
 
+import org.jets3t.service.S3Service;
+import org.jets3t.service.acl.AccessControlList;
+import org.jets3t.service.impl.rest.httpclient.RestS3Service;
+import org.jets3t.service.model.S3Bucket;
+import org.jets3t.service.model.S3Object;
+import org.jets3t.service.security.AWSCredentials;
 import org.mingle.banana.spring.jdbc.Spitter;
 import org.mingle.banana.spring.jdbc.Spittle;
 import org.mingle.banana.spring.mvc.service.SpitterService;
@@ -103,8 +108,8 @@ public class SpitterController {
 
 			AccessControlList acl = new AccessControlList();
 			acl.setOwner(imageBucket.getOwner());
-			acl.grantPermission(GroupGrantee.ALL_USERS,
-					Permission.PERMISSION_READ);
+//			acl.grantPermission(GroupGrantee.ALL_USERS,
+//					Permission.PERMISSION_READ);
 			imageObject.setAcl(acl);
 			s3.putObject(imageBucket, imageObject);
 		} catch (Exception e) {
