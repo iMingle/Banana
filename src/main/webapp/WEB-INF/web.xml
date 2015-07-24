@@ -6,41 +6,27 @@
       http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
     version="2.4">
     
-	<display-name>Archetype Created Web Application</display-name>
-
 	<!-- Used by the JSTL I18N actions -->
 	<context-param>
-		<param-name>
-			javax.servlet.jsp.jstl.fmt.fallbackLocale
-		</param-name>
-		<param-value>
-			en
-		</param-value>
+		<param-name>javax.servlet.jsp.jstl.fmt.fallbackLocale</param-name>
+		<param-value>en</param-value>
 	</context-param>
 
 	<!-- Used by the JSTL database actions -->
 	<context-param>
-		<param-name>
-			javax.servlet.jsp.jstl.sql.dataSource
-		</param-name>
-		<param-value>
-			jdbc:mysql://localhost/mingle,com.mysql.jdbc.Driver,root,password
-		</param-value>
+		<param-name>javax.servlet.jsp.jstl.sql.dataSource</param-name>
+		<param-value>jdbc:mysql://localhost/mingle,com.mysql.jdbc.Driver,root,password</param-value>
 	</context-param>
 
 	<!-- Used by the ResourceManagerListener in Chapter 19 -->
 	<context-param>
 		<param-name>driverClass</param-name>
-		<param-value>
-			com.mysql.jdbc.Driver
-		</param-value>
+		<param-value>com.mysql.jdbc.Driver</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>jdbcURL</param-name>
-		<param-value>
-			jdbc:mysql://localhost/mingle
-		</param-value>
+		<param-value>jdbc:mysql://localhost/mingle</param-value>
 	</context-param>
 	
 	<context-param>
@@ -56,9 +42,7 @@
 	<!-- Filter and listener configurations for Chapter 19 -->
 	<filter>
 		<filter-name>accessControl</filter-name>
-		<filter-class>
-			org.mingle.banana.jsp.servlets.AccessControlFilter
-		</filter-class>
+		<filter-class>org.mingle.banana.jsp.servlets.AccessControlFilter</filter-class>
 		<init-param>
 			<param-name>loginPage</param-name>
 			<param-value>/views/jsp/ch19/login.jsp</param-value>
@@ -81,6 +65,7 @@
 			org.mingle.banana.jsp.servlets.SessionCounterListener
 		</listener-class>
 	</listener>
+	
 	<!-- Spring MVC分发器 -->
 	<servlet>
         <servlet-name>melonDispatcher</servlet-name>
@@ -102,7 +87,11 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            classpath:/META-INF/springContext/application-global-context.xml
+            <!-- classpath:/META-INF/springContext/application-global-context.xml -->
+            /WEB-INF/flow.xml
+            /WEB-INF/services.xml
+   			/WEB-INF/domain.xml
+   			/WEB-INF/dataaccess.xml
         </param-value>
     </context-param>
     <!-- 加载其他的配置文件 -->
@@ -112,9 +101,7 @@
 
 	<filter>
 		<filter-name>UrlRewriteFilter</filter-name>
-		<filter-class>
-			org.tuckey.web.filters.urlrewrite.UrlRewriteFilter
-		</filter-class>
+		<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
 	</filter>
 
 	<filter-mapping>
@@ -210,7 +197,6 @@
 		<web-resource-collection>
 			<web-resource-name>admin</web-resource-name>
 			<url-pattern>/views/jsp/ch13/admin/*</url-pattern>
-			<!-- <url-pattern>/views/jsp/ch13/search/delete.jsp</url-pattern> -->
 		</web-resource-collection>
 		<auth-constraint>
 			<role-name>admin</role-name>

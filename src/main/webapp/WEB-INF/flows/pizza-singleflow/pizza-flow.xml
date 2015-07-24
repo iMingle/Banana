@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://www.springframework.org/schema/webflow 
   http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
-    <var name="order" class="com.springinaction.pizza.domain.Order"/>
+    <var name="order" class="org.mingle.banana.spring.flow.domain.Order"/>
     
     <!-- Customer -->
     <view-state id="welcome">
@@ -14,10 +14,10 @@
     
     <action-state id="lookupCustomer">
         <evaluate result="order.customer"
-            result-type="com.springinaction.pizza.domain.Customer"
+            result-type="org.mingle.banana.spring.flow.domain.Customer"
             expression="pizzaFlowActions.lookupCustomer(requestParameters.phoneNumber)" />
         <transition to="registrationForm" 
-            on-exception="com.springinaction.pizza.service.CustomerNotFoundException" />
+            on-exception="org.mingle.banana.spring.flow.service.CustomerNotFoundException" />
         <transition to="showOrder" />
     </action-state>
     
@@ -41,10 +41,10 @@
     <view-state id="createPizza" model="flowScope.pizza">
         <on-entry>
           <set name="flowScope.pizza" 
-              value="new com.springinaction.pizza.domain.Pizza()" />
+              value="new org.mingle.banana.spring.flow.domain.Pizza()" />
               
           <evaluate result="viewScope.toppingsList" 
-              expression="@com.springinaction.pizza.domain.Topping@asList()" />
+              expression="@org.mingle.banana.spring.flow.domain.Topping@asList()" />
         </on-entry>
         <transition on="addPizza" to="showOrder">
           <evaluate expression="order.addPizza(flowScope.pizza)" />
@@ -56,10 +56,10 @@
     <view-state id="takePayment" model="flowScope.paymentDetails">
         <on-entry>
           <set name="flowScope.paymentDetails" 
-              value="new com.springinaction.pizza.domain.PaymentDetails()" />
+              value="new org.mingle.banana.spring.flow.domain.PaymentDetails()" />
 
           <evaluate result="viewScope.paymentTypeList" 
-              expression="@com.springinaction.pizza.domain.PaymentType@asList()" />
+              expression="@org.mingle.banana.spring.flow.domain.PaymentType@asList()" />
         </on-entry>
         <transition on="paymentSubmitted" to="verifyPayment" />
         <transition on="cancel" to="endState" />

@@ -6,7 +6,7 @@
         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
         
   <bean id="pricingEngine" 
-      class="com.springinaction.pizza.service.PricingEngineImpl" />        
+      class="org.mingle.banana.spring.flow.service.PricingEngineImpl" />        
 
 <!--       
   <lang:groovy id="pricingEngineGroovy" 
@@ -14,13 +14,13 @@
  -->
  
    <bean id="customerService" 
-      class="com.springinaction.pizza.service.CustomerServiceImpl" />
+      class="org.mingle.banana.spring.flow.service.CustomerServiceImpl" />
  
   <!-- Payment processing bean, as discussed on page 606 -->
   <bean id="paymentProcessor"
-      class="com.springinaction.pizza.service.PaymentProcessor" />
+      class="org.mingle.banana.spring.flow.service.PaymentProcessor" />
       
   <bean id="orderService"
-      class="com.springinaction.pizza.service.OrderServiceImpl" />
+      class="org.mingle.banana.spring.flow.service.OrderServiceImpl" />
  
 </beans>
