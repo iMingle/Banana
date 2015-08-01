@@ -114,6 +114,12 @@
 		<artifactId>spring-webmvc</artifactId>
 		<version>${spring.version}</version>
     </dependency>
+	<!-- Spring JMS -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jms</artifactId>
+		<version>${spring.version}</version>
+    </dependency>
 	<!-- spring-security-core -->
 	<dependency>
 		<groupId>org.springframework.security</groupId>
@@ -328,6 +334,13 @@
 		<artifactId>commons-lang3</artifactId>
 		<version>3.4</version>
 	</dependency>
+	<!-- Puts together an ActiveMQ jar bundle -->
+	<dependency>
+		<groupId>org.apache.activemq</groupId>
+		<artifactId>activemq-all</artifactId>
+		<version>5.11.1</version>
+	</dependency>
+	
   </dependencies>
   
   <build>

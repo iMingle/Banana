@@ -1,8 +1,9 @@
 package org.mingle.banana.spring.jdbc;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Spittle {
+public class Spittle implements Serializable {
 	private Long id;
 	private Spitter spitter;
 	private String text;
