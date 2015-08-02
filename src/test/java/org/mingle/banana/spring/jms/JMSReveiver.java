@@ -4,6 +4,7 @@
 package org.mingle.banana.spring.jms;
 
 import javax.inject.Inject;
+import javax.jms.Message;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,7 +28,8 @@ public class JMSReveiver {
 	@Test
 	public void receive() {
 		try {
-			System.out.println(jmsTemplate.receive());
+			Message message = jmsTemplate.receive();
+			System.out.println(message);
 		} catch (JmsException e) {
 			e.printStackTrace();
 		}
