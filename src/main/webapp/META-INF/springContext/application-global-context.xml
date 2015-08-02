@@ -11,6 +11,8 @@
 	<!-- 开启注解 -->
 	<mvc:annotation-driven />
 	
+	<context:component-scan base-package="org.mingle.banana.spring" />
+	
 	<import resource="application/application-mvc-context.xml"/>
 	
 </beans>

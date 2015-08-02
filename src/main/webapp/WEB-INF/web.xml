@@ -87,11 +87,11 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            <!-- classpath:/META-INF/springContext/application-global-context.xml -->
+            classpath:/META-INF/springContext/application-global-context.xml
+            classpath:/spring/*/*.xml
             /WEB-INF/flow.xml
             /WEB-INF/services.xml
    			/WEB-INF/domain.xml
-   			/WEB-INF/dataaccess.xml
         </param-value>
     </context-param>
     <!-- 加载其他的配置文件 -->
@@ -100,7 +100,7 @@
     </listener>
     
     <!-- Spring过滤器Chain -->
-    <filter>
+    <!-- <filter>
     	<filter-name>springSecurityFilterChain</filter-name>
     	<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     </filter>
@@ -108,7 +108,7 @@
 	<filter-mapping>
         <filter-name>springSecurityFilterChain</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping> -->
     
     <!-- 浏览器form表单只支持GET与POST请求，而DELETE、PUT等method并不支持，spring3.0添加了一个过滤器，
     可以将这些请求转换为标准的http方法，使得支持GET、POST、PUT与DELETE请求，该过滤器为HiddenHttpMethodFilter。 -->

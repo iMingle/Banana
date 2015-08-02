@@ -32,7 +32,7 @@ public class SpringConfig {
 	}
 
 	@Bean
-	private Poem sonnet() {
+	public Poem sonnet() {
 		return new Sonnet();
 	}
 

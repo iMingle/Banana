@@ -345,12 +345,32 @@
 		<groupId>org.logicblaze.lingo</groupId>
 		<artifactId>lingo</artifactId>
 		<version>1.3</version>
+		<exclusions>
+			<exclusion>
+				<groupId>commons-dbcp</groupId>
+      			<artifactId>commons-dbcp</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+      			<artifactId>spring</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>log4j</groupId>
+      			<artifactId>log4j</artifactId>
+			</exclusion>
+		</exclusions>
 	</dependency>
 	<!-- xbean-spring provides a schema-driven proprietary namespace handler for spring contexts -->
 	<dependency>
 		<groupId>org.apache.xbean</groupId>
 		<artifactId>xbean-spring</artifactId>
 		<version>4.3</version>
+	</dependency>
+	<!-- MX4J JMX API and implementation -->
+	<dependency>
+		<groupId>mx4j</groupId>
+		<artifactId>mx4j</artifactId>
+		<version>3.0.2</version>
 	</dependency>
   </dependencies>
   

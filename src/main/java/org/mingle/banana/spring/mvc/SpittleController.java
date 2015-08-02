@@ -71,7 +71,7 @@ public class SpittleController {
 	// <end id="method_addNewSpittle"/>
 
 	// <start id="method_updateSpittle"/>
-	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/{id}", method = RequestMethod.POST)
 	public String updateSpittle(@PathVariable("id") long id,
 			@Valid Spittle spittle) {
 		spitterService.saveSpittle(spittle);
